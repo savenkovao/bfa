@@ -1,0 +1,73 @@
+.main-screen {
+  .panel {
+    position: relative;
+    padding-bottom: 120px;
+  }
+
+  .aside-img {
+    background-image: url("../img/aside/pic_screen1.svg");
+    animation-name: main-screen-anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes main-screen-anim{
+  0%   {background-position: 0 55%;}
+  50%   {background-position: 0 60%;}
+  100% {background-position:  0 55%;}
+}
+
+.main-screen_head {
+  margin-top: 95px;
+
+  h1 {
+    position: relative;
+    margin-top: 0;
+    padding-top: 40px;
+    padding-left: 30px;
+    line-height: 85px;
+    z-index: 1;
+
+    &::before {
+      content: 'Bid4Ask';
+      position: absolute;
+      font-size: 90px;
+      top: -9px;
+      left: -37px;
+      color: #fff;
+      text-shadow: 0px 0px 2px #176f63;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -43px;
+      width: 65px;
+      height: 8px;
+      background-color: #000;
+    }
+  }
+}
+.main-screen_description {
+  margin-top: 155px;
+  max-width: 380px;
+  padding-left: 30px;
+}
+
+.main-screen_logos{
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  padding: 0 60px;
+
+  svg {
+    transition: .2s;
+    &:hover {
+        fill: red;
+    }
+  }
+}
