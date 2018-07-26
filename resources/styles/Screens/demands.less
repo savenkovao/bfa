@@ -16,7 +16,7 @@
     left: -19.5%;
     background-size: 170%;
     background-image: url("../img/aside/pic_screen2.svg");
-    animation-name: demands-screen-anim;
+    //animation-name: demands-screen-anim;
     animation-duration: 15s;
     animation-iteration-count: infinite;
   }
@@ -49,5 +49,21 @@
 
   .demands-screen_list {
     max-width: 500px;
+  }
+}
+
+@media @laptop {
+  .demands-screen_description{
+    flex-wrap: wrap;
+  }
+
+  .demands-screen_txt{
+    margin-right: 30px;
+  }
+}
+
+@media @mobileLg {
+  .demands-screen_head {
+    margin-top: 0;
   }
 }

@@ -1,7 +1,29 @@
 h1, .h1{
+  position: relative;
   .font-size(120);
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+
+  &::before {
+    content: 'Bid4Ask';
+    position: absolute;
+    .font-size(90);
+    top: -9px;
+    left: -37px;
+    color: #fff;
+    text-shadow: 0px 0px 2px #176f63;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -43px;
+    width: 65px;
+    height: 8px;
+    background-color: #000;
+  }
 }
 h2, .h2{
   .font-size(90);
@@ -90,3 +112,92 @@ p, .p{
   letter-spacing: 0.02em;
   color: #1F9988;
 }
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, p, .ul, .ul li,
+.sub-title, .notation, .link {
+  transition: .2s;
+}
+
+@media @laptopLg {
+  h1, .h1{
+    .font-size(110);
+
+    &::before {
+      top: -7px;
+      .font-size(85);
+    }
+  }
+  h2, .h2{
+    .font-size(80);
+  }
+}
+
+@media @laptop {
+  h1, .h1{
+    .font-size(90);
+
+    &::before {
+      top: -4px;
+      .font-size(75);
+    }
+  }
+  h2, .h2{
+    .font-size(60);
+  }
+}
+
+@media @tablet {
+//992px
+  h1, .h1{
+    .font-size(80);
+
+    &::before {
+      top: 4px;
+      .font-size(70);
+    }
+  }
+  h2, .h2{
+     .font-size(55);
+   }
+
+}
+
+@media @mobileLg {
+//768px
+  h1, .h1{
+    .font-size(60);
+
+
+    &::before {
+      top: 12px;
+      left: -21px;
+      .font-size(50);
+    }
+
+    &::after {
+      bottom: 9px;
+      left: -20px;
+      width: 20px;
+      height: 3px;
+    }
+  }
+
+
+}
+
+
+@media @mobileMd {
+//768px
+  h1, .h1,
+  h2, .h2 {
+    .font-size(52);
+
+
+    &::before {
+      top: 23px;
+      .font-size(38);
+    }
+  }
+}
+
+

@@ -16,7 +16,7 @@
 
   .aside-img {
     background-image: url("../img/aside/pic_screen1.svg");
-    animation-name: about-screen-anim;
+    //animation-name: about-screen-anim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
@@ -29,40 +29,20 @@
 }
 
 .about-screen_head {
-  margin-top: 95px;
+  margin-top: 11.4vh;
 
   h1 {
-    position: relative;
     margin-top: 0;
     padding-top: 40px;
     padding-left: 30px;
     line-height: 85px;
     z-index: 1;
-
-    &::before {
-      content: 'Bid4Ask';
-      position: absolute;
-      font-size: 90px;
-      top: -9px;
-      left: -37px;
-      color: #fff;
-      text-shadow: 0px 0px 2px #176f63;
-      z-index: -1;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -43px;
-      width: 65px;
-      height: 8px;
-      background-color: #000;
-    }
   }
 }
+
 .about-screen_description {
   margin-top: 155px;
+  margin-top: 18vh;
   max-width: 380px;
   padding-left: 30px;
 }
@@ -85,10 +65,66 @@
 @media @laptopLg {
   .about-screen {
     .aside-img {
-      width: 130%;
+      width: 135%;
       height: 100%;
       top: 0;
       right: -5%;
     }
+  }
+}
+
+@media @laptop {
+    .about-screen_logos {
+      padding: 0 30px 0 20px;
+    }
+}
+
+@media @tablet {
+  .about-screen_logos {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    bottom: auto;
+    left: auto;
+    padding: 0;
+  }
+}
+
+@media @mobileLg {
+  .about-screen {
+    .aside-img {
+      width: 135%;
+      height: 100%;
+      top: 0;
+      right: -5%;
+    }
+  }
+  .about-screen_description{
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  .about-screen_head {
+    margin-top: 50px;
+    h1{
+      padding-left: 0;
+      line-height: 1;
+    }
+  }
+
+
+}
+
+
+//@h800
+//@h750
+//@h700
+//@h650
+//@h600
+@media @h750 {
+  .about-screen_description {
+    margin-top: 10vh;
+  }
+  .about-screen_head {
+    margin-top: 9vh;
   }
 }

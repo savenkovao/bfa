@@ -3,6 +3,7 @@ import {Helpers} from "./Helpers";
 import { DropAnimation } from './Components/DropAnimation';
 import { ScrollModule } from './Modules/ScrollModule';
 import { Popup } from './Components/Popup';
+import { HeaderComponent } from './Components/Header';
 
 class App {
     constructor(CONFIG) {
@@ -10,6 +11,7 @@ class App {
 
         this._initModules();
         this._initPlugins();
+        this._initComponents();
         this._events();
     }
 
@@ -19,14 +21,19 @@ class App {
 
     _initModules() {
         new ScrollModule();
+    }
+
+    _initComponents() {
+        new HeaderComponent();
+    }
+
+
+    _initPlugins() {
         new Popup();
+        new DropAnimation();
     }
 
     _events() {
-    }
-
-    _initPlugins() {
-        new DropAnimation();
     }
 }
 

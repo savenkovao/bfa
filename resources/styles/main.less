@@ -37,7 +37,8 @@ html, body {
 .wrapper {
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  overflow: hidden;
   transition: .3s;
 
   &.wrapper-blured {
@@ -69,6 +70,7 @@ html, body {
   max-width: 315px;
   background-color: #126F62;
   //overflow: hidden;
+  transition: .2s;
 
   &.aside-lg {
     width: 35%;
@@ -110,4 +112,53 @@ html, body {
     }
   }
 
+}
+
+@media @tablet {
+  .aside {
+    min-width: 235px;
+    &.aside-lg {
+      min-width: 235px;
+    }
+  }
+
+}
+
+@media @mobileLg {
+  .container {
+    display: block;
+    height: auto;
+  }
+
+  .panel {
+    padding: 100px 20px 35px;
+  }
+  .aside {
+    height: 550px;
+    height: 70vw;
+    width: 100%;
+    max-width: none;
+
+    &.aside-lg {
+      width: 100%;
+    }
+
+    .aside-img {
+      width: 100%!important;
+      height: 138%!important;
+      top: auto!important;
+      bottom: 0!important;
+      right: 0!important;
+      left: auto!important;
+      background-size: 100%!important;
+    }
+  }
+
+
+}
+
+@media @mobileMd {
+  .aside {
+    height: 60vw;
+  }
 }
