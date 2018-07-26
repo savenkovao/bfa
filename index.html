@@ -21,11 +21,11 @@
 
   <title>Bid4ask</title>
 </head>
-<body id="top">
-  <header class="header">
+<body>
+  <header id="header" class="header">
     <div class="header-white">
       <div class="logo">
-        <a href="#top">
+        <a href="#about">
           <svg width="91" height="35" viewBox="0 0 91 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.2728 5.87865C6.06798 5.87865 6.68645 5.76821 7.12822 5.54733C7.82242 5.20023 8.16953 4.57544 8.16953 3.67297C8.16953 2.7642 7.80034 2.15203 7.06195 1.83649C6.64543 1.65978 6.02696 1.57143 5.20654 1.57143H1.84595V5.87865H5.2728ZM5.90705 12.2969C7.06195 12.2969 7.88553 11.9624 8.37779 11.2935C8.68703 10.8706 8.84164 10.3594 8.84164 9.75989C8.84164 8.75014 8.39041 8.06224 7.48794 7.69621C7.00831 7.50057 6.37406 7.40275 5.58519 7.40275H1.84595V12.2969H5.90705ZM0 0H5.97332C7.60154 0 8.7596 0.485943 9.44749 1.45783C9.8514 2.03213 10.0533 2.69478 10.0533 3.44578C10.0533 4.323 9.80406 5.04245 9.3055 5.60413C9.04675 5.90074 8.6744 6.17211 8.18846 6.41824C8.9016 6.68961 9.43487 6.99569 9.78829 7.33648C10.4131 7.94233 10.7255 8.77854 10.7255 9.84509C10.7255 10.7412 10.4446 11.5522 9.88295 12.278C9.04359 13.3634 7.70883 13.9062 5.87865 13.9062H0V0Z" transform="translate(0 10.8849)" fill="#1F9988"/>
             <path d="M13.4045 0H15.3072V13.9062H13.4045V0Z" transform="translate(0 10.8849)" fill="#1F9988"/>
@@ -42,12 +42,12 @@
       </div>
       <nav class="nav">
         <ul class="menu">
-          <li><a href="#">about</a></li>
-          <li><a href="#">market demands</a></li>
-          <li><a href="#">solution</a></li>
-          <li><a href="#">roadmap</a></li>
-          <li><a href="#">white paper</a></li>
-          <li><a href="#">news</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#demands">market demands</a></li>
+          <li><a href="#solution">solution</a></li>
+          <li><a href="#roadmap">roadmap</a></li>
+          <li><a href="#white_paper">white paper</a></li>
+          <li><a href="#news">news</a></li>
         </ul>
       </nav>
 
@@ -69,23 +69,23 @@
 
   </header>
   <div class="wrapper">
-    <section>
-      <div class="container main-screen">
+    <section id="about" data-id="about">
+      <div class="container about-screen">
 
         <div class="panel">
-          <div class="main-screen_description">
+          <div class="about-screen_description">
             <div class="h4">
               Bid4Ask — A convenient instrument for managing investment portfolios and the center of stock analytics in the cryptoworld
             </div>
           </div>
 
-          <div class="main-screen_head">
+          <div class="about-screen_head">
             <h1>
               Bid4Ask
             </h1>
           </div>
 
-          <div class="flex a-i-center j-c-space-between main-screen_logos">
+          <div class="flex a-i-center j-c-space-between about-screen_logos">
             <a href="https://bittrex.com/" target="_blank">
               <img src="public/img/bittrex.svg" alt="bittrex">
             </a>
@@ -101,12 +101,12 @@
           </div>
 
           <ul class="dots-nav">
-            <li><a href="#top" class="active"></a></li>
+            <li><a href="#about" class="active"></a></li>
             <li><a href="#demands"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#news"></a></li>
+            <li><a href="#charts"></a></li>
           </ul>
         </div>
 
@@ -118,7 +118,7 @@
 
 
     </section>
-    <section id="demands">
+    <section id="demands" data-id="demands">
       <div class="container demands-screen">
 
 
@@ -129,9 +129,11 @@
             </div>
           </div>
           <div class="flex demands-screen_description">
-            <div class="h4">
-              Let’s admit, when the classical methods of analysis do not work, and there are no regulators,
-              the Wolf from Wall Street is uncomfortable to feel like a hamster on a roller coaster of stock quotes.
+            <div class="demands-screen_txt">
+              <div class="h5">
+                Let’s admit, when the classical methods of analysis do not work, and there are no regulators,
+                the Wolf from Wall Street is uncomfortable to feel like a hamster on a roller coaster of stock quotes.
+              </div>
             </div>
 
             <div class="demands-screen_list">
@@ -150,12 +152,12 @@
 
 
           <ul class="dots-nav">
-            <li><a href="#top"></a></li>
+            <li><a href="#about"></a></li>
             <li><a href="#demands" class="active"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#news"></a></li>
+            <li><a href="#charts"></a></li>
           </ul>
 
         </div>
@@ -168,10 +170,264 @@
 
 
     </section>
+    <section id="solution" data-id="solution">
+      <div class="container solution-screen">
+
+
+        <div class="panel">
+          <div class="solution-screen_head">
+            <div class="h2">
+              Solution
+            </div>
+          </div>
+          <div class="flex solution-screen_description">
+            <div class="solution-screen_txt">
+              <div class="h5">
+                In addition, we intend to form a qualified community whose goal will be exclusively to trade,
+                invest and get profit with the use of crypto-currencies and projects, using crypto-currencies.
+              </div>
+
+              <div class="notation m-t-20">
+                We find our platform’s product monetization in the application of the business model by subscription – SaaS (Software as a Service) with an integrated exchange of opportunities for crypto units.
+                Being a community not pursuing the benefits of the fiat world, we declare that all mutual settlements of the platform will be available only in crypto units without linking to the rate of any fiat pair.
+                The community considers itself not having a tax residency and legal form, and its declared founders are only the first among equal participants.
+              </div>
+            </div>
+
+            <div class="solution-screen_list">
+              <p>The platform to be created will provide:</p>
+
+              <ul class="ul">
+                <li>
+                  Traders with a tool for monitoring the results of trading on available exchanges,
+                  tracking the changes in marginality from the start of trading or select a period
+                </li>
+                <li>
+                  Portfolio managers with a tool for convenient management of their clients’ portfolios,
+                  applying known trading strategies and not worrying about their incorrect display and generating
+                  detailed reporting for clients;
+                </li>
+                <li>
+                  Investors with analytics to comprehend the situation on the market and an availability
+                  to use the platform-based analytics for trading and investments – short-term, medium-term and long-term
+                </li>
+                <li>Bots with the necessary information and API for profitable high-frequency trading</li>
+                <li>Automatically generated recommendations, estimating risks of investing in the announced ICOs</li>
+              </ul>
+
+            </div>
+          </div>
+
+
+
+          <ul class="dots-nav">
+            <li><a href="#about"></a></li>
+            <li><a href="#demands"></a></li>
+            <li><a href="#solution" class="active"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#news"></a></li>
+            <li><a href="#charts"></a></li>
+          </ul>
+
+        </div>
+
+        <div class="aside">
+          <div class="drop-animation"></div>
+          <div class="aside-img"></div>
+        </div>
+      </div>
+
+
+    </section>
+    <section id="roadmap" data-id="roadmap">
+      <div class="container roadmap-screen">
+        <div class="panel">
+          <div class="roadmap-screen_head">
+            <div class="h2">
+              Roadmap
+            </div>
+          </div>
+          <div class="flex roadmap-screen_description">
+
+            <div class="roadmap-screen_map">
+
+              <div class="roadmap-screen_map-item">
+                <div class="roadmap-screen_map-title h5">Q3’2017</div>
+
+                <ul class="roadmap-screen_map-steps">
+                  <li class="scored">
+                    <div class="roadmap-screen_map-step">PRE-SALE</div>
+                    <div class="notation roadmap-screen_map-year">Q3’2017</div>
+                  </li>
+                  <li class="scored">
+                    <div class="roadmap-screen_map-step">Designing the look and content</div>
+                    <div class="notation roadmap-screen_map-year">Q3’2017</div>
+                  </li>
+                  <li class="scored">
+                    <div class="roadmap-screen_map-step">Development starts on September 1</div>
+                    <div class="notation roadmap-screen_map-year">Q3’2017</div>
+                  </li>
+                  <li class="target">
+                    <div class="roadmap-screen_map-step">Whitepaper</div>
+                    <div class="notation roadmap-screen_map-year">Q3’2017</div>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="roadmap-screen_map-item">
+                <div class="roadmap-screen_map-title h5">Q4’2017</div>
+
+                <ul class="roadmap-screen_map-steps">
+                  <li class="target">
+                    <div class="roadmap-screen_map-step">1st round ends in October</div>
+                    <div class="notation roadmap-screen_map-year">Q4’2017</div>
+                  </li>
+                  <li class="target">
+                    <div class="roadmap-screen_map-step">2nd round starts</div>
+                    <div class="notation roadmap-screen_map-year">Q4’2017</div>
+                  </li>
+                  <li class="target">
+                    <div class="roadmap-screen_map-step">One more month in the case of force majeure</div>
+                    <div class="notation roadmap-screen_map-year">Q4’2017</div>
+                  </li>
+                  <li class="target">
+                    <div class="roadmap-screen_map-step">PRE-ICO starts on October 1</div>
+                    <div class="notation roadmap-screen_map-year">Q4’2017</div>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="roadmap-screen_map-item">
+                <div class="roadmap-screen_map-title h5">Q1’2018</div>
+
+                <ul class="roadmap-screen_map-steps">
+                  <li class="">
+                    <div class="roadmap-screen_map-step">Soon...</div>
+                    <div class="notation roadmap-screen_map-year">Q1’2018</div>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <ul class="dots-nav">
+            <li><a href="#about"></a></li>
+            <li><a href="#demands"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#roadmap" class="active"></a></li>
+            <li><a href="#news"></a></li>
+            <li><a href="#charts"></a></li>
+          </ul>
+
+        </div>
+
+        <div class="aside">
+          <div class="drop-animation"></div>
+          <div class="aside-img"></div>
+        </div>
+      </div>
+
+
+    </section>
+    <section id="news" data-id="news">
+      <div class="container news-screen">
+        <div class="panel">
+          <div class="news-screen_head">
+            <div class="h2">
+              News
+            </div>
+          </div>
+          <div class="flex news-screen_description">
+            <div class="news-screen_t-widget">
+              <img src="http://via.placeholder.com/360x475/2C99D4/ffffff" alt="">
+            </div>
+            <div class="news-screen_video">
+              <div class="adaptive-video-frame">
+
+                <iframe width="100%" src="https://www.youtube.com/embed/OUz2pMLD43c"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <ul class="dots-nav">
+            <li><a href="#about"></a></li>
+            <li><a href="#demands"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#news" class="active"></a></li>
+            <li><a href="#charts"></a></li>
+          </ul>
+
+        </div>
+
+        <div class="aside">
+          <div class="drop-animation"></div>
+          <div class="aside-img"></div>
+        </div>
+      </div>
+
+
+    </section>
+    <section id="charts" data-id="news">
+      <div class="container charts-screen">
+
+        <div class="panel">
+
+          <div class="charts-screen_description">
+            <div class="flex j-c-center flex-wrap charts-screen_charts">
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+              <div class="charts-screen_chart-item">
+                <img src="http://via.placeholder.com/150x210/126F62/ffffff" alt="">
+              </div>
+            </div>
+          </div>
+
+          <ul class="dots-nav">
+            <li><a href="#about"></a></li>
+            <li><a href="#demands"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#news"></a></li>
+            <li><a href="#charts" class="active"></a></li>
+          </ul>
+        </div>
+
+        <div class="aside aside-lg">
+          <div class="drop-animation"></div>
+          <div class="aside-img"></div>
+        </div>
+      </div>
+
+
+    </section>
   </div>
 
 </body>
 
-<!--<script src="resources/vendors/3d_particle_plugin/js/vendor/three.min.js"></script>-->
+<script src="resources/vendors/3d_particle_plugin/js/vendor/three.min.js"></script>
 <script src="public/js/index.js"></script>
 </html>

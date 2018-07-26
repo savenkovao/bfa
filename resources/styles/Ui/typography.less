@@ -18,6 +18,13 @@ h4, .h4{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
+
+h5, .h5{
+  .font-size(14);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
 p, .p{
   .font-size(12);
   font-weight: 700;
@@ -38,6 +45,14 @@ p, .p{
     margin-bottom: 25px;
     .font-size(12);
 
+    &:hover {
+      &::before {
+        left: 4px;
+        color: #1F9988;
+      }
+    }
+
+
     &::before {
       content: '⟶';
       position: absolute;
@@ -47,6 +62,7 @@ p, .p{
       top: 0;
       font-size: 20px;
       line-height: 12px;
+      transition: .2s;
     }
   }
 
@@ -57,8 +73,10 @@ p, .p{
   font-family: 'Montserrat', sans-serif;
 }
 .notation{
-  .font-size(10);
+  .line-height(10, 14);
+  font-weight: 900;
   font-family: 'Montserrat', sans-serif;
+  color: #7F7F7F;
 }
 
 .text-bold {

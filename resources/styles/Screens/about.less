@@ -1,4 +1,14 @@
-.main-screen {
+.about-screen-bg {
+
+  .header-login {
+    background-color: #1F9988;
+  }
+}
+
+.about-screen {
+  .aside {
+    background-color: #126F62;
+  }
   .panel {
     position: relative;
     padding-bottom: 120px;
@@ -6,19 +16,19 @@
 
   .aside-img {
     background-image: url("../img/aside/pic_screen1.svg");
-    animation-name: main-screen-anim;
+    animation-name: about-screen-anim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
 }
 
-@keyframes main-screen-anim{
+@keyframes about-screen-anim{
   0%   {background-position: 0 55%;}
   50%   {background-position: 0 60%;}
   100% {background-position:  0 55%;}
 }
 
-.main-screen_head {
+.about-screen_head {
   margin-top: 95px;
 
   h1 {
@@ -51,13 +61,13 @@
     }
   }
 }
-.main-screen_description {
+.about-screen_description {
   margin-top: 155px;
   max-width: 380px;
   padding-left: 30px;
 }
 
-.main-screen_logos{
+.about-screen_logos{
   position: absolute;
   bottom: 30px;
   left: 0;

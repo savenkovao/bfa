@@ -44,7 +44,7 @@ gulp.task('script', function() {
 });
 
 gulp.task('script-concat', ['script'], function() {
-  return gulp.src(['vendors/3d_particle_plugin/js/vendor/three.min.js', PUBLIC_DIR+'/js/index.js'])
+  return gulp.src([/*'vendors/3d_particle_plugin/js/vendor/three.min.js', */PUBLIC_DIR+'/js/index.js'])
     .pipe(concat( 'index.js'))
     .pipe(gulp.dest(PUBLIC_DIR+'/js'))
 });

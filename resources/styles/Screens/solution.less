@@ -1,0 +1,51 @@
+.demands-screen-bg {
+  .header-login {
+    background-color: #14ad9e;
+  }
+}
+.solution-screen {
+  .aside {
+    background-color: #0b867a;
+  }
+  .aside-img {
+    width: 111%;
+    top: 0;
+    right: 0;
+    left: auto;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-image: url("../img/aside/pic_screen3.svg");
+    animation-name: solution-screen-anim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes solution-screen-anim{
+    0%   {background-position: 50% 50%;}
+    25%   {background-position: 50% 54%;}
+    50%   {background-position: 50% 50%;}
+    75%   {background-position: 50% 46%;}
+    100%   {background-position: 50% 50%;}
+  }
+
+  .drop-animation {
+    top: -100px;
+  }
+}
+.solution-screen_head {
+  margin-top: 20px;
+}
+
+.solution-screen_description {
+  margin-top: 50px;
+
+  .solution-screen_txt {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 12%;
+  }
+
+  .solution-screen_list {
+    max-width: 500px;
+  }
+}

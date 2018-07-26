@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {Helpers} from "./Helpers";
 import { DropAnimation } from './Components/DropAnimation';
+import { ScrollModule } from './Modules/ScrollModule';
 
 class App {
     constructor(CONFIG) {
@@ -16,10 +17,10 @@ class App {
     // }
 
     _initModules() {
+        new ScrollModule();
     }
 
     _events() {
-        console.log('App initeASAsaQWERQWEQWd')
     }
 
     _initPlugins() {
