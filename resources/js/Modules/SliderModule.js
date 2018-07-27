@@ -91,6 +91,7 @@ export class SliderModule {
       $(`.menu a[data-slickgoto="${ this.index }"]`).toggleClass('active', true);
 
       $('body')[0].className = `${ screen }-screen-bg`;
+      location.hash = `#${screen}`;
     }
 
 }
