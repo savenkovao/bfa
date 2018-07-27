@@ -27,7 +27,7 @@
   }
 }
 .roadmap-screen_head {
-  margin-top: 20px;
+  //margin-top: 20px;
 }
 
 .roadmap-screen_description {
@@ -143,8 +143,69 @@
 
 .roadmap-screen_map-year {}
 
+@media @laptopMd {
+  .roadmap-screen_map-item {
+    margin-right: 25px;
+    min-width: 130px;
+  }
+
+  .roadmap-screen_map-steps {
+    li {
+
+      padding-left: 5px;
+    }
+  }
+  .roadmap-screen_map-step {
+    .font-size(16)
+  }
+}
+
+@media @tablet {
+  .roadmap-screen_map{
+    display: block;
+  }
+  .roadmap-screen_map-item {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
 @media @mobileLg {
+  .roadmap-screen {
+    .aside {
+      height: 300px;
+    }
+    .aside-img {
+      background-position: 50% 20%;
+      background-size: 280px!important;
+
+    }
+
+    .drop-animation {
+      top: 0;
+    }
+  }
+
   .roadmap-screen_map {
     flex-wrap: wrap;
+  }
+}
+
+
+@media @h750 {
+  .roadmap-screen {
+    .aside-img {
+      right: 20%;
+      background-position: 50% 60%;
+      background-size: 90%;
+    }
+  }
+}
+@media @h650 {
+  .roadmap-screen {
+    .aside-img {
+      right: 21%;
+      background-size: 80%;
+    }
   }
 }

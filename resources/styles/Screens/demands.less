@@ -35,7 +35,7 @@
   }
 }
 .demands-screen_head {
-  margin-top: 5vh;
+  //margin-top: 5vh;
 }
 
 .demands-screen_description {
@@ -55,10 +55,17 @@
 @media @laptop {
   .demands-screen_description{
     flex-wrap: wrap;
-  }
+    margin-top: 30px;
 
-  .demands-screen_txt{
-    margin-right: 30px;
+    .demands-screen_txt{
+      margin-bottom: 30px;
+      margin-right: 0;
+      max-width: 600px;
+    }
+
+    .demands-screen_list {
+      max-width: 600px;
+    }
   }
 }
 
@@ -77,30 +84,48 @@
       background-position: 50% 100%!important;
     }
 
-    .drop-animation {
-      top: auto;
-      height: 130%;
-      bottom: 80px;
-    }
-
     .panel {
       padding-bottom: 110px;
+    }
+  }
+
+  .demands-screen_description {
+    margin-top: 30px;
+
+  }
+}
+
+@media @laptopMd {
+  .demands-screen_description {
+    .demands-screen_txt{
+      margin-right: 6%;
     }
   }
 }
 
 
-//@h800
-//@h750
-//@h700
-//@h650
-//@h600
+@media only screen and (max-height: 890px) {
+  .demands-screen {
+    .aside-img {
+      top: 0;
+    }
+  }
+}
+
 @media @h750 {
   .demands-screen_head {
     margin-top: 2.5vh;
   }
   .demands-screen_description {
     margin-top: 3vh;
+  }
+  .demands-screen {
+    .aside-img {
+      top: 0;
+      background-size: 140%;
+      left: -25%;
+      background-position: 50% 100%;
+    }
   }
 }
 
@@ -111,3 +136,13 @@
     }
   }
 }
+
+@media @h650 {
+  .demands-screen {
+    .aside-img {
+      background-size: 120%;
+      left: -29%;
+    }
+  }
+}
+

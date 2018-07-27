@@ -39,7 +39,7 @@ html, body {
   position: relative;
   //overflow-x: hidden;
   overflow: hidden;
-  transition: .3s;
+  transition: .2s;
 
   &.wrapper-blured {
     filter: blur(9px);
@@ -58,6 +58,9 @@ html, body {
 }
 .panel {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   padding: 35px;
   padding-top: 100px;
@@ -111,27 +114,37 @@ html, body {
       min-width: 315px;
     }
   }
-
 }
 
+
+@media @laptop {
+  .container {
+    height: auto;
+  }
+}
+
+
 @media @tablet {
+  .panel {
+    display: block;
+    padding: 50px 35px;
+  }
   .aside {
     min-width: 235px;
     &.aside-lg {
       min-width: 235px;
     }
   }
-
 }
 
 @media @mobileLg {
+
   .container {
     display: block;
-    height: auto;
   }
 
   .panel {
-    padding: 100px 20px 35px;
+    padding: 100px 20px 70px;
   }
   .aside {
     height: 550px;
@@ -154,10 +167,26 @@ html, body {
     }
   }
 
+  .drop-animation {
+    top: auto!important;
+    bottom: 0;
+    canvas {
+      height: 1300px !important;
+      width: 1300px !important;
+    }
+  }
 
 }
 
+
 @media @mobileMd {
+  .drop-animation {
+    canvas {
+      height: 900px !important;
+      width: 900px !important;
+    }
+  }
+
   .aside {
     height: 60vw;
   }

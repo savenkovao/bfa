@@ -93,9 +93,10 @@ p, .p{
 .sub-title{
   .font-size(14);
   font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 }
 .notation{
-  .line-height(10, 14);
+  .line-height(12, 14);
   font-weight: 900;
   font-family: 'Montserrat', sans-serif;
   color: #7F7F7F;
@@ -137,6 +138,7 @@ h4, .h4, h5, .h5, p, .ul, .ul li,
   }
 
   .ul {
+    padding-top: 15px;
     li {
       margin-bottom: 15px;
     }
@@ -149,6 +151,7 @@ h4, .h4, h5, .h5, p, .ul, .ul li,
   }
 
   .ul {
+    padding-top: 10px;
     li {
       margin-bottom: 10px;
     }
@@ -224,3 +227,8 @@ h4, .h4, h5, .h5, p, .ul, .ul li,
 }
 
 
+@media @h750 {
+  .notation{
+    .line-height(10, 14);
+  }
+}

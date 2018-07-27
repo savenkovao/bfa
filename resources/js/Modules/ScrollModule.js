@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import { BaseModule } from '../Base/BaseModule';
 
-
-
 export class ScrollModule extends BaseModule{
 
   constructor() {
@@ -46,6 +44,5 @@ export class ScrollModule extends BaseModule{
     $('#header')
       .find('.menu a').toggleClass('active', false).end()
       .find( `[href="#${ $(item).attr('data-id') }"]` ).toggleClass('active', true);
-
   }
 }
