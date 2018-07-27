@@ -7,7 +7,7 @@
 
 .demands-screen {
   .aside {
-    background-color: #116e61;
+    background-color: #126f62;
   }
 
   .aside-img {
@@ -35,11 +35,11 @@
   }
 }
 .demands-screen_head {
-  margin-top: 45px;
+  margin-top: 5vh;
 }
 
 .demands-screen_description {
-  margin-top: 50px;
+  margin-top: 6vh;
 
   .demands-screen_txt {
     max-width: 300px;
@@ -65,5 +65,49 @@
 @media @mobileLg {
   .demands-screen_head {
     margin-top: 0;
+  }
+
+  .demands-screen {
+    .aside {
+      height: 350px;
+    }
+
+    .aside-img {
+      background-size: 350px!important;
+      background-position: 50% 100%!important;
+    }
+
+    .drop-animation {
+      top: auto;
+      height: 130%;
+      bottom: 80px;
+    }
+
+    .panel {
+      padding-bottom: 110px;
+    }
+  }
+}
+
+
+//@h800
+//@h750
+//@h700
+//@h650
+//@h600
+@media @h750 {
+  .demands-screen_head {
+    margin-top: 2.5vh;
+  }
+  .demands-screen_description {
+    margin-top: 3vh;
+  }
+}
+
+@media only screen and (max-width: 1360px) and (max-height: 680px) {
+  .demands-screen_description {
+    .demands-screen_txt{
+      margin-right: 6%;
+    }
   }
 }
