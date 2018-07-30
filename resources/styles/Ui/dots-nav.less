@@ -9,7 +9,14 @@
   z-index: 10;
 
   li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+
+    &:hover >a:not(.active){
+      transform: scale(4);
+    }
   }
 
   a{
@@ -26,13 +33,11 @@
       border: 3px solid #8BD9D0;
     }
 
-    &:hover:not(.active){
-      transform: scale(4);
-    }
   }
+
 }
 
-@media @tablet {
+@media @laptop {
   .dots-nav {
     display: none;
   }

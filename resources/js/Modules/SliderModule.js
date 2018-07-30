@@ -46,7 +46,7 @@ export class SliderModule {
       touchThreshold: 3,
       accessibility: true,
       responsive: [{
-        breakpoint: 1200,
+        breakpoint: 1121,
         settings: "unslick"
       }]
     };
@@ -54,7 +54,7 @@ export class SliderModule {
     this.Slider = new Slider('#slider', this.options);
 
     window.addEventListener('wheel', (e)=> {
-      event.preventDefault();
+      // event.preventDefault();
 
       clearTimeout(timeout);
 
@@ -73,7 +73,6 @@ export class SliderModule {
       } else if (e.which === 40 || e.which ===39 || e.which === 9) {
         this.Slider.slick('slickNext');
       }
-      console.log('ads')
     });
 
 
@@ -99,18 +98,21 @@ export class SliderModule {
     _menuItemsHighlight() {
       let $slide = $('.slick-active');
       let screen =  $slide.find('section').attr('id');
+      console.log($slide)
 
-      $slide.find('.drop-animation').append( $('[data-drop-animation] canvas') );
-      $('[data-drop-animation]').removeAttr('data-drop-animation');
-      $slide.attr('data-drop-animation', '');
+      if($slide.length){
+        $slide.find('.drop-animation').append( $('[data-drop-animation] canvas') );
+        $('[data-drop-animation]').removeAttr('data-drop-animation');
+        $slide.attr('data-drop-animation', '');
 
-      this.index = $slide.attr('data-slick-index') <= 4 ? $slide.attr('data-slick-index') : 4;
+        this.index = $slide.attr('data-slick-index') <= 4 ? $slide.attr('data-slick-index') : 4;
 
-      $('#header').find('.menu a').toggleClass('active', false);
-      $(`.menu a[data-slickgoto="${ this.index }"]`).toggleClass('active', true);
+        $('#header').find('.menu a').toggleClass('active', false);
+        $(`.menu a[data-slickgoto="${ this.index }"]`).toggleClass('active', true);
 
-      $('body')[0].className = `${ screen }-screen-bg`;
-      location.hash = `#${screen}`;
+        $('body')[0].className = `${ screen }-screen-bg`;
+        location.hash = `#${screen}`;
+      }
     }
 
 }
