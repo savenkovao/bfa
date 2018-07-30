@@ -42,6 +42,7 @@ export class SliderModule {
       verticalSwiping: true,
       arrows: false,
       infinite: false,
+      speed: 300,
       responsive: [{
         breakpoint: 1200,
         settings: "unslick"
@@ -51,15 +52,15 @@ export class SliderModule {
     this.Slider = new Slider('#slider', this.options);
 
     window.addEventListener('wheel', (e)=> {
-      clearTimeout(timeout);
-
-      timeout = setTimeout(()=>{
+      // clearTimeout(timeout);
+console.log('wheel')
+      // timeout = setTimeout(()=>{
         if (e.deltaY < 0) {
           this.Slider.slick('slickPrev');
         } else if (e.deltaY > 0) {
           this.Slider.slick('slickNext');
         }
-      }, 200);
+      // }, 200);
     });
 
     $('.menu a, .dots-nav a').on('click', (e)=>{
