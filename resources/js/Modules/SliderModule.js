@@ -52,6 +52,8 @@ export class SliderModule {
     this.Slider = new Slider('#slider', this.options);
 
     window.addEventListener('wheel', (e)=> {
+      event.preventDefault();
+      console.log(e)
       clearTimeout(timeout);
 console.log('wheel 12')
       timeout = setTimeout(()=>{

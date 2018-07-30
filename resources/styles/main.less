@@ -31,6 +31,7 @@ html, body {
   position: relative;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 
@@ -118,6 +119,10 @@ html, body {
 
 
 @media @laptop {
+
+  html, body {
+    overflow: auto;
+  }
   .container {
     height: auto;
   }
