@@ -73,6 +73,7 @@ export class SliderModule {
       } else if (e.which === 40 || e.which ===39 || e.which === 9) {
         this.Slider.slick('slickNext');
       }
+      console.log('ads')
     });
 
 
