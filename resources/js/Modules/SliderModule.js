@@ -43,6 +43,8 @@ export class SliderModule {
       arrows: false,
       infinite: false,
       speed: 300,
+      touchThreshold: 3,
+      accessibility: true,
       responsive: [{
         breakpoint: 1200,
         settings: "unslick"
@@ -65,6 +67,16 @@ export class SliderModule {
       }, 30);
     });
 
+    $(window).on('keydown keyup keypress', (e)=> {
+      if (e.which === 37 || e.which === 38 || e.which === 9 && event.shiftKey) {
+        this.Slider.slick('slickPrev');
+      } else if (e.which === 40 || e.which ===39 || e.which === 9) {
+        this.Slider.slick('slickNext');
+      }
+    });
+
+
+
     $('.menu a, .dots-nav a').on('click', (e)=>{
       this.index = $(e.currentTarget).attr('data-slickgoto');
       this.Slider.slick('slickGoTo', this.index);
@@ -76,7 +88,6 @@ export class SliderModule {
 
     $(window).on('resize', (e)=>{
       if( window.matchMedia('(min-width: 1121px)').matches && !this.Slider.hasClass('slick-slider') ) {
-        console.log('adss')
         this.Slider = new Slider('#slider', this.options);
       }
     });
@@ -87,6 +98,10 @@ export class SliderModule {
     _menuItemsHighlight() {
       let $slide = $('.slick-active');
       let screen =  $slide.find('section').attr('id');
+
+      $slide.find('.drop-animation').append( $('[data-drop-animation] canvas') );
+      $('[data-drop-animation]').removeAttr('data-drop-animation');
+      $slide.attr('data-drop-animation', '');
 
       this.index = $slide.attr('data-slick-index') <= 4 ? $slide.attr('data-slick-index') : 4;
 

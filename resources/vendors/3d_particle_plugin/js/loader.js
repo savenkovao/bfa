@@ -11,7 +11,7 @@ class Loader {
 		this.dom = {
 			html: document.documentElement,
 			// container: document.querySelector('.loader')
-			container: document.querySelectorAll('.drop-animation')
+			container: document.querySelectorAll('[data-drop-animation]')
 		};
 
 		console.log(this.dom.container)
