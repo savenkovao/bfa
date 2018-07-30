@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import { BaseModule } from '../Base/BaseModule';
 import { Slider } from '../Components/Slider';
+import { ScrollModule } from './ScrollModule';
 
 
 
@@ -53,6 +53,10 @@ export class SliderModule {
 
     this.Slider = new Slider('#slider', this.options);
 
+    if( this.Slider.slick('getSlick').unslicked ) {
+      this.scrollModule = new ScrollModule();
+    }
+
     window.addEventListener('wheel', (e)=> {
       // event.preventDefault();
 
@@ -75,11 +79,16 @@ export class SliderModule {
       }
     });
 
-
-
     $('.menu a, .dots-nav a').on('click', (e)=>{
       this.index = $(e.currentTarget).attr('data-slickgoto');
       this.Slider.slick('slickGoTo', this.index);
+    });
+
+    this.Slider.on('init', (event, slick, currentSlide, nextSlide)=> {
+      $('body').addClass('slider-mode');
+    });
+    this.Slider.on('destroy', (event, slick, currentSlide, nextSlide)=> {
+      $('body').removeClass('slider-mode');
     });
 
     this.Slider.on('afterChange', (event, slick, currentSlide, nextSlide)=> {
@@ -89,6 +98,14 @@ export class SliderModule {
     $(window).on('resize', (e)=>{
       if( window.matchMedia('(min-width: 1121px)').matches && !this.Slider.hasClass('slick-slider') ) {
         this.Slider = new Slider('#slider', this.options);
+
+        if( this.scrollModule ) {
+          // this.scrollModule;
+          this.scrollModule = null;
+        }
+      } else if( window.matchMedia('(max-width: 1120px)').matches && !this.scrollModule ) {
+        console.log(this.scrollModule);
+        this.scrollModule = new ScrollModule();
       }
     });
 
@@ -98,7 +115,6 @@ export class SliderModule {
     _menuItemsHighlight() {
       let $slide = $('.slick-active');
       let screen =  $slide.find('section').attr('id');
-      console.log($slide)
 
       if($slide.length){
         $slide.find('.drop-animation').append( $('[data-drop-animation] canvas') );
@@ -110,7 +126,7 @@ export class SliderModule {
         $('#header').find('.menu a').toggleClass('active', false);
         $(`.menu a[data-slickgoto="${ this.index }"]`).toggleClass('active', true);
 
-        $('body')[0].className = `${ screen }-screen-bg`;
+        $('body')[0].className = `${ screen }-screen-bg slider-mode`;
         location.hash = `#${screen}`;
       }
     }

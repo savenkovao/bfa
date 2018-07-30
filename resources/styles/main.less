@@ -31,7 +31,14 @@ html, body {
   position: relative;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
+  &.slider-mode {
+    overflow: hidden;
+  }
+  &.hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 
@@ -127,10 +134,11 @@ html, body {
 
 @media @laptop {
 
-  html, body {
-    overflow: initial;
-  }
+  //html, body {
+  //  overflow: initial;
+  //}
   .container {
+    min-height: 100vh;
     height: auto;
   }
 }
@@ -139,7 +147,7 @@ html, body {
 @media @tablet {
   .panel {
     display: block;
-    padding: 50px 35px;
+    padding: 100px 35px;
   }
   .aside {
     min-width: 235px;

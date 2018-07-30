@@ -9,18 +9,18 @@ export class ScrollModule extends BaseModule{
   }
 
   _events(){
-    $(window).on('scroll', () =>{
-      if( window.matchMedia("(min-width: 768px)").matches ){
-        this._menuItemsHighlight();
-      }
+    let that = this;
+    $(window).on('scroll', ()=>{
+      that._menuItemsHighlight()
     });
   }
 
-  _init() {
-    this._initMenuItemsHighlight()
+  unbindHandlers() {
+    let that = this;
+    $(window).off('scroll', that._menuItemsHighlight);
   }
 
-  _initMenuItemsHighlight() {
+  _init() {
     this._menuItemsHighlight();
   }
 
@@ -30,11 +30,8 @@ export class ScrollModule extends BaseModule{
       $items = $('section');
 
     $items.each( (i, item) => {
-      if ( windowBottomPosition >= $(item).offset().top + 50 ) {
+      if ( windowTopPosition >= $(item).offset().top - 20 ) {
         this._toggleMenuItem(item);
-      }
-
-      if ( windowTopPosition >= $(item).offset().top ) {
         $('body')[0].className = `${ $(item).attr('id') }-screen-bg`;
       }
     });
@@ -44,5 +41,9 @@ export class ScrollModule extends BaseModule{
     $('#header')
       .find('.menu a').toggleClass('active', false).end()
       .find( `[href="#${ $(item).attr('data-id') }"]` ).toggleClass('active', true);
+
+    $(item).find('.drop-animation').append( $('[data-drop-animation] canvas') );
+    $('[data-drop-animation]').removeAttr('data-drop-animation');
+    $(item).attr('data-drop-animation', '');
   }
 }
