@@ -67,8 +67,16 @@ export class SliderModule {
           this.scrollModule.unbindHandlers();
           this.scrollModule = null;
         }
-      } else if( window.matchMedia('(max-width: 1120px)').matches && !this.scrollModule ) {
+      }
+      // else if(window.matchMedia('(min-width: 1121px) and (max-height: 529px)').matches &&
+      //   this.Slider
+      // ) {
+      //   this.Slider.slick('unslick');
+      //   console.log(this.Slider)
+      // }
+      else if( window.matchMedia('(max-width: 1120px)').matches && !this.scrollModule ) {
         this.scrollModule = new ScrollModule();
+
       }
     });
   }
