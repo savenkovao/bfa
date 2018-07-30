@@ -52,15 +52,15 @@ export class SliderModule {
     this.Slider = new Slider('#slider', this.options);
 
     window.addEventListener('wheel', (e)=> {
-      // clearTimeout(timeout);
-console.log('wheel')
-      // timeout = setTimeout(()=>{
+      clearTimeout(timeout);
+console.log('wheel 1')
+      timeout = setTimeout(()=>{
         if (e.deltaY < 0) {
           this.Slider.slick('slickPrev');
         } else if (e.deltaY > 0) {
           this.Slider.slick('slickNext');
         }
-      // }, 200);
+      }, 100);
     });
 
     $('.menu a, .dots-nav a').on('click', (e)=>{
