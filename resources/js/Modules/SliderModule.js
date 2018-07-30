@@ -53,16 +53,16 @@ export class SliderModule {
 
     window.addEventListener('wheel', (e)=> {
       event.preventDefault();
-      console.log(e)
+
       clearTimeout(timeout);
-console.log('wheel 12')
+
       timeout = setTimeout(()=>{
         if (e.deltaY < 0) {
           this.Slider.slick('slickPrev');
         } else if (e.deltaY > 0) {
           this.Slider.slick('slickNext');
         }
-      }, 50);
+      }, 30);
     });
 
     $('.menu a, .dots-nav a').on('click', (e)=>{
