@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {Helpers} from "./Helpers";
-import { DropAnimation } from './Components/DropAnimation';
+// import { DropAnimation } from './Components/DropAnimation';
 import { ScrollModule } from './Modules/ScrollModule';
 import { Popup } from './Components/Popup';
 import { HeaderComponent } from './Components/Header';
@@ -36,7 +36,7 @@ class App {
 
     _initPlugins() {
         new Popup();
-        new DropAnimation();
+        // new DropAnimation();
 
     }
 
