@@ -11,7 +11,8 @@ class Loader {
 		this.dom = {
 			html: document.documentElement,
 			// container: document.querySelector('.loader')
-			container: document.querySelectorAll('[data-drop-animation]')
+			container: document.querySelector('[data-drop-animation]')
+			// container: document.querySelectorAll('[data-drop-animation]')
 		};
 
 		console.log(this.dom.container)
@@ -85,21 +86,23 @@ class Loader {
 	}
 
 	setupRenderer() {
-
-
-		// this.dom.container.appendChild(this.renderer.domElement);
-		let that = this;
-      this.renderer = [];
-		this.dom.container.forEach(function(element) {
-      let a = new THREE.WebGLRenderer({
-        alpha: true,
-        antialias: true
-      });
-      element.appendChild(a.domElement);
-      // element.appendChild(that.renderer.domElement );
-			that.renderer.push(a);
-
+    this.renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true
     });
+
+    this.dom.container.appendChild(this.renderer.domElement);
+
+    // let that = this;
+    //   this.renderer = [];
+    // this.dom.container.forEach(function(element) {
+    //   let a = new THREE.WebGLRenderer({
+    //     alpha: true,
+    //     antialias: true
+    //   });
+    //   element.appendChild(a.domElement);
+			// that.renderer.push(a);
+    // });
 	}
 
 	setupControls() {
@@ -166,12 +169,12 @@ class Loader {
 	}
 
 	render() {
-		// this.renderer.render(this.scene, this.camera);
+		this.renderer.render(this.scene, this.camera);
 
-    var that = this;
-    this.renderer.forEach(function (el) {
-      el.render(that.scene, that.camera);
-    })
+    // var that = this;
+    // this.renderer.forEach(function (el) {
+    //   el.render(that.scene, that.camera);
+    // })
 	}
 
 	listen() {
@@ -241,13 +244,12 @@ class Loader {
 		this.camera.updateProjectionMatrix();
 
 
-    this.renderer.forEach((el)=>{
-      el.setPixelRatio(this.dpr);
-      el.setSize(this.width, this.height);
-
-		})
-		// this.renderer.setPixelRatio(this.dpr);
-		// this.renderer.setSize(this.width, this.height);
+    // this.renderer.forEach((el)=>{
+     //  el.setPixelRatio(this.dpr);
+     //  el.setSize(this.width, this.height);
+		// })
+		this.renderer.setPixelRatio(this.dpr);
+		this.renderer.setSize(this.width, this.height);
 	}
 
 	onVisibilityChange(e) {

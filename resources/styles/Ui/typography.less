@@ -27,6 +27,7 @@ h1, .h1{
 }
 h2, .h2{
   .font-size(90);
+  line-height: 1;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
@@ -117,6 +118,37 @@ h1, .h1, h2, .h2, h3, .h3,
 h4, .h4, h5, .h5, p, .ul, .ul li,
 .sub-title, .notation, .link {
   transition: .2s;
+}
+
+@media screen and (min-width: 1480px) and (min-height: 650px){
+  h1, .h1{
+    .font-size(150);
+
+    &::before {
+      top: -20px;
+      .font-size(130);
+    }
+  }
+  h2, .h2{
+    .font-size(110);
+  }
+  h5, .h5{
+    .font-size(16);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+  }
+  p, .p {
+      .font-size(14);
+  }
+  .ul {
+    li {
+      .font-size(14);
+    }
+  }
+
+  .notation {
+    font-size:12px!important;
+  }
 }
 
 @media @laptopLg {

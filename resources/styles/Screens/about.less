@@ -54,10 +54,29 @@
   width: 100%;
   padding: 0 60px;
 
-  svg {
+  img {
     transition: .2s;
-    &:hover {
-        fill: red;
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 1480px) and (min-height: 650px){
+  .about-screen_description {
+    max-width: 460px;
+  }
+
+  .about-screen_head {
+    margin-top: 12vh;
+  }
+
+
+  .about-screen_logos{
+    justify-content: space-around;
+
+    img {
+      min-width: 170px;
+      max-width: 170px;
     }
   }
 }
@@ -120,6 +139,11 @@
 //@h700
 //@h650
 //@h600
+@media @h650 {
+  .about-screen_description {
+    max-width: 460px;
+  }
+}
 @media @h750 {
   .about-screen_description {
     margin-top: 10vh;

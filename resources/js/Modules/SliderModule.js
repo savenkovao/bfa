@@ -111,7 +111,7 @@ export class SliderModule {
       }
     });
 
-    $('.menu a, .dots-nav a').on('click', (e)=>{
+    $('.menu a, .dots-nav a, .logo a').on('click', (e)=>{
       this.index = $(e.currentTarget).attr('data-slickgoto');
       this.Slider.slick('slickGoTo', this.index);
     });

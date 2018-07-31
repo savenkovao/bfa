@@ -13,7 +13,7 @@
     top: 0;
     right: -33%;
     left: auto;
-    background-position: 100% 110px;
+    background-position: 100% 30px;
     background-size: 103%;
     background-image: url("../img/aside/pic_screen5.svg");
     //animation-name: news-screen-anim;
@@ -23,12 +23,12 @@
 
 
   @keyframes news-screen-anim{
-    0%   {background-position: 100% 110px;}
-    30%   {background-position: 100% 110px;}
+    0%   {background-position: 100% 30px;}
+    30%   {background-position: 100% 30px;}
     50%   {background-position: 100% 10%;}
     60%   {background-position: 100% 10%;}
     70%   {background-position: 100% 30%;}
-    100% {background-position:  100% 110px;}
+    100% {background-position:  100% 30px;}
   }
 
   .drop-animation {
@@ -60,13 +60,30 @@
 }
 .news-screen_video {
   width: 100%;
-  max-width: 600px;
-  min-width: 350px;
-  margin-right: 60px;
+  max-width: 720px;
+  min-width: 450px;
+  margin-right: 50px;
+
+  iframe {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
+
+@media screen and (min-width: 1480px) and (min-height: 650px){
+  .news-screen {
+    .aside-img {
+      background-position: 100% 80px;
+    }
+  }
+}
+
 
 @media @tablet {
   .news-screen {
+    .aside-img {
+      background-position: 100% 200px;
+    }
     .panel {
       padding-bottom: 80px;
     }

@@ -15,7 +15,7 @@ export class ScrollModule extends BaseModule{
     });
 
 
-    $(".menu, .dots-nav").on("click", "a", function (event) {
+    $(".menu, .dots-nav, .logo").on("click", "a", function (event) {
       if( $(this).attr('href').substring(0,1) === '#') {
         event.preventDefault();
         let id = $(this).attr('href'),
