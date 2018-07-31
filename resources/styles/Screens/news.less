@@ -41,6 +41,7 @@
 
 .news-screen_description {
   margin-top: 50px;
+  height: 100%;
 }
 
 .news-screen_t-widget {
@@ -49,11 +50,12 @@
   margin-right: 7%;
   text-align: center;
 
-  img {
-    display: inline-block;
+  iframe {
+    display: block;
     margin: 0 auto;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 540px;
+    min-height: 400px;
   }
 }
 .news-screen_video {
@@ -63,7 +65,7 @@
   margin-right: 60px;
 }
 
-@media @laptop {
+@media @tablet {
   .news-screen {
     .panel {
       padding-bottom: 80px;
@@ -78,12 +80,16 @@
     max-width: 400px;
     margin-right: 0;
     margin: 0 auto;
+
+    iframe {
+      min-height: 540px;
+    }
   }
 
   .news-screen_video {
     margin: 35px auto 0;
+    min-width: 100%;
   }
-
 }
 
 @media @mobileLg {
@@ -97,9 +103,6 @@
       background-position: 50% 21%;
       background-size: 330px!important;
     }
-  }
-  .news-screen_video {
-    min-width: 100%;
   }
 }
 

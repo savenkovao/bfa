@@ -2,8 +2,6 @@ import $ from 'jquery';
 import { Slider } from '../Components/Slider';
 import { ScrollModule } from './ScrollModule';
 
-
-
 export class SliderModule {
 
   constructor() {
@@ -49,6 +47,7 @@ export class SliderModule {
     if( window.matchMedia('(min-width: 1121px) and (min-height: 530px)').matches ) {
       this.Slider = new Slider('#slider', this.options);
     }
+
     if( !this.Slider || this.Slider.slick('getSlick').unslicked ) {
       this.scrollModule = new ScrollModule();
     } else {
@@ -77,6 +76,12 @@ export class SliderModule {
       else if( window.matchMedia('(max-width: 1120px)').matches && !this.scrollModule ) {
         this.scrollModule = new ScrollModule();
 
+        let hash = location.hash;
+          console.log(hash)
+        if( hash ) {
+          let top = $( hash ).offset().top;
+          $('body,html').animate({scrollTop: top}, 0);
+        }
       }
     });
   }

@@ -1,9 +1,8 @@
 import $ from 'jquery';
 import { DropAnimation } from './Components/DropAnimation';
-import { ScrollModule } from './Modules/ScrollModule';
 import { SliderModule } from './Modules/SliderModule';
 import { HeaderComponent } from './Components/Header';
-// import { Popup } from './Components/Popup';
+import { YoutubeVideoFrame } from './Components/YoutubeVideoFrame';
 
 class App {
     constructor(CONFIG) {
@@ -15,20 +14,16 @@ class App {
         this._events();
     }
     _initModules() {
-            this.sliderModule = new SliderModule();
-
-            // new ScrollModule();
-        // if( !this.sliderModule.Slider ) {
-        // }
+        this.sliderModule = new SliderModule();
     }
 
     _initComponents() {
         new HeaderComponent();
+      this.youtubeVideoFrame = new YoutubeVideoFrame();
     }
 
 
     _initPlugins() {
-        // new Popup();
         new DropAnimation();
     }
 
