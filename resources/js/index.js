@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { DropAnimation } from './Components/DropAnimation';
+require('./../vendors/3d_particle_plugin/dist/js/demo-5/index.bundle.js');
 import { SliderModule } from './Modules/SliderModule';
 import { HeaderComponent } from './Components/Header';
 import { YoutubeVideoFrame } from './Components/YoutubeVideoFrame';
@@ -9,9 +9,7 @@ class App {
         this.CONFIG = CONFIG;
 
         this._initModules();
-        this._initPlugins();
         this._initComponents();
-        this._events();
     }
     _initModules() {
         this.sliderModule = new SliderModule();
@@ -19,15 +17,7 @@ class App {
 
     _initComponents() {
         new HeaderComponent();
-      this.youtubeVideoFrame = new YoutubeVideoFrame();
-    }
-
-
-    _initPlugins() {
-        new DropAnimation();
-    }
-
-    _events() {
+        this.youtubeVideoFrame = new YoutubeVideoFrame();
     }
 }
 

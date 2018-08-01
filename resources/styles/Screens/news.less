@@ -46,6 +46,7 @@
 
 .news-screen_t-widget {
   width: 100%;
+  min-width: 290px;
   max-width: 360px;
   margin-right: 7%;
   text-align: center;
@@ -60,8 +61,8 @@
 }
 .news-screen_video {
   width: 100%;
+  min-width: 350px;
   max-width: 720px;
-  min-width: 450px;
   margin-right: 50px;
 
   iframe {
@@ -79,16 +80,7 @@
 }
 
 
-@media @tablet {
-  .news-screen {
-    .aside-img {
-      background-position: 100% 200px;
-    }
-    .panel {
-      padding-bottom: 80px;
-    }
-  }
-
+@media @laptop {
   .news-screen_description {
     display: block!important;
   }
@@ -109,6 +101,16 @@
   }
 }
 
+@media @tablet {
+  .news-screen {
+    .aside-img {
+      background-position: 100% 200px;
+    }
+    .panel {
+      padding-bottom: 80px;
+    }
+  }
+}
 @media @mobileLg {
   .news-screen {
     .aside {

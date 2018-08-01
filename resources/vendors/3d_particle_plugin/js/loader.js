@@ -15,8 +15,6 @@ class Loader {
 			// container: document.querySelectorAll('[data-drop-animation]')
 		};
 
-		console.log(this.dom.container)
-
 		this.dom.html.classList.add('loading');
 
 		this.completed = false;

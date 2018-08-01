@@ -10,20 +10,25 @@ export class ScrollModule extends BaseModule{
 
   _events(){
     let that = this;
+
     $(window).on('scroll', ()=>{
       that._menuItemsHighlight()
     });
 
-
-    $(".menu, .dots-nav, .logo").on("click", "a", function (event) {
-      if( $(this).attr('href').substring(0,1) === '#') {
-        event.preventDefault();
-        let id = $(this).attr('href'),
-          top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 800);
+    $(".menu, .dots-nav, .logo").on("click", "a", (e)=> {
+      if( $(e.currentTarget).attr('href').substring(0,1) === '#') {
+        e.preventDefault();
+        this.navigateToBlock( $(e.currentTarget).attr('href') );
       }
     });
+
   }
+
+  navigateToBlock(selector, time) {
+    let top = $(selector).offset().top;
+    $('body,html').animate({scrollTop: top}, time || 800);
+  }
+
 
   unbindHandlers() {
     let that = this;
@@ -31,6 +36,10 @@ export class ScrollModule extends BaseModule{
   }
 
   _init() {
+    if( location.hash ) {
+      this.navigateToBlock( location.hash, 1 );
+    }
+
     this._menuItemsHighlight();
   }
 

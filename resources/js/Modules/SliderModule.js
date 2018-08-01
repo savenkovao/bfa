@@ -74,14 +74,9 @@ export class SliderModule {
       //   console.log(this.Slider)
       // }
       else if( window.matchMedia('(max-width: 1120px)').matches && !this.scrollModule ) {
-        this.scrollModule = new ScrollModule();
-
-        let hash = location.hash;
-          console.log(hash)
-        if( hash ) {
-          let top = $( hash ).offset().top;
-          $('body,html').animate({scrollTop: top}, 0);
-        }
+        setTimeout(()=>{
+          this.scrollModule = new ScrollModule();
+        }, 100)
       }
     });
   }
@@ -132,8 +127,8 @@ export class SliderModule {
   }
 
     _menuItemsHighlight() {
-      let $slide = $('.slick-active');
-      let screen =  $slide.find('section').attr('id');
+      let $slide = $('.slick-active'),
+        screen =  $slide.find('section').attr('id');
 
       if( $slide.length ){
         $slide.find('.drop-animation').append( $('[data-drop-animation] canvas') );

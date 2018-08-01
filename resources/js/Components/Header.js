@@ -11,6 +11,7 @@ export class HeaderComponent extends BaseComponent {
         $(document).on('click', '.brgr-menu', (e)=>{
             toggleMobileMenu();
         });
+
         $(document).on('click', '.header-login.mobile-show', (e)=>{
             toggleMobileMenu();
         });
