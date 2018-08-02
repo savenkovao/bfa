@@ -1,0 +1,222 @@
+.roadmap-screen-bg {
+  .header-login {
+    background-color: #2f93a0;
+  }
+}
+
+
+.roadmap-screen {
+  .aside {
+    background-color: #1c6e79;
+  }
+  .aside-img {
+    width: 119%;
+    top: 0;
+    right: 20%;
+    left: auto;
+    background-position: 50% 40%;
+    background-size: 100%;
+    background-image: url("../img/aside/pic_screen4.svg");
+    animation-name: about-screen-anim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+
+  .drop-animation {
+    top: -15px;
+  }
+}
+.roadmap-screen_head {
+  //margin-top: 20px;
+}
+
+.roadmap-screen_description {
+  margin-top: 50px;
+}
+
+.roadmap-screen_map {
+  display: flex;
+}
+
+.roadmap-screen_map-item {
+  width: auto;
+  max-width: 340px;
+  min-width: 215px;
+  margin-right: 7%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.roadmap-screen_map-title {}
+
+.roadmap-screen_map-steps {
+  position: relative;
+  padding-left: 17px;
+  margin-top: 20px;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+
+    &.scored,
+    &.target {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        right: 0;
+        transition: .2s;
+      }
+    }
+
+    &.scored {
+      &::before {
+        width: 13px;
+        height: 6px;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        &::before {
+          transform: rotate(-45deg) scale(1.2);
+          border-color: #1F9988;
+        }
+      }
+    }
+
+    &.target {
+      &::before {
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/target.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/target-red.svg");
+          transform: rotate(90deg) scale(1.2);
+        }
+      }
+    }
+
+    &:last-child {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        top: 16.5px;
+        left: -17px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: auto;
+    left: 2px;
+    top: 11px;
+    bottom: 10px;
+    border-left: 1px dashed #000;
+  }
+
+
+}
+
+.roadmap-screen_map-step {
+  .font-size(18);
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.roadmap-screen_map-year {}
+
+@media @laptopMd {
+  .roadmap-screen_map-item {
+    margin-right: 25px;
+    min-width: 130px;
+  }
+
+  .roadmap-screen_map-steps {
+    li {
+
+      padding-left: 5px;
+    }
+  }
+  .roadmap-screen_map-step {
+    .font-size(16)
+  }
+}
+
+@media @tablet {
+  .roadmap-screen_map{
+    display: block;
+  }
+  .roadmap-screen_map-item {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media @mobileLg {
+  .roadmap-screen {
+    .aside {
+      height: 300px;
+    }
+    .aside-img {
+      background-position: 50% 20%;
+      background-size: 280px!important;
+
+    }
+
+    .drop-animation {
+      top: 0;
+    }
+  }
+
+  .roadmap-screen_map {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1480px) and (min-height: 650px){
+  .demands-screen_description {
+    margin-top: 9vh;
+  }
+  .roadmap-screen_map-item{
+    max-width: 480px;
+  }
+
+  .roadmap-screen_map-step {
+    .font-size(18);
+  }
+}
+
+@media @h750 {
+  .roadmap-screen {
+    .aside-img {
+      right: 20%;
+      background-position: 50% 60%;
+      background-size: 90%;
+    }
+  }
+}
+@media @h650 {
+  .roadmap-screen {
+    .aside-img {
+      right: 21%;
+      background-size: 80%;
+    }
+  }
+}

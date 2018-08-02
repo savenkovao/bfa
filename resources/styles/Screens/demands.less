@@ -1,0 +1,186 @@
+.demands-screen-bg {
+
+  .header-login {
+    background-color: #1F9988;
+  }
+}
+
+.demands-screen {
+  .aside {
+    background-color: #126f62;
+  }
+
+  .aside-img {
+    top: -8%;
+    right: auto;
+    left: -19.5%;
+    background-size: 170%;
+    background-image: url("../img/aside/pic_screen2.svg");
+    animation-name: demands-screen-anim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+
+  @media screen and (min-width: 1121px) {
+    @keyframes demands-screen-anim {
+      0% {
+        background-position: 50% 50%;
+      }
+      30% {
+        background-position: 50% 50%;
+      }
+      50% {
+        background-position: 50% 60%;
+      }
+      60% {
+        background-position: 50% 60%;
+      }
+      70% {
+        background-position: 50% 80%;
+      }
+      100% {
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  .drop-animation {
+    top: -100px;
+  }
+}
+.demands-screen_head {
+  //margin-top: 5vh;
+}
+
+.demands-screen_description {
+  margin-top: 6vh;
+
+  .demands-screen_txt {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 12%;
+  }
+
+  .demands-screen_list {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1480px) and (min-height: 650px) {
+  .demands-screen {
+    .aside-img {
+      background-size: 100%!important;
+      left: -32.2%!important;
+    }
+  }
+  .demands-screen_description {
+    margin-top: 9vh;
+    .demands-screen_txt {
+      max-width: none;
+      flex: 3;
+      margin-right: 5%;
+    }
+
+    .demands-screen_list{
+      max-width: none;
+      flex: 8;
+      max-width: 800px;
+    }
+
+  }
+}
+
+@media @laptop {
+  .demands-screen_description{
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    .demands-screen_txt{
+      margin-bottom: 30px;
+      margin-right: 0;
+      max-width: 600px;
+    }
+
+    .demands-screen_list {
+      max-width: 600px;
+    }
+  }
+}
+
+@media @mobileLg {
+  .demands-screen_head {
+    margin-top: 0;
+  }
+
+  .demands-screen {
+    .aside {
+      height: 350px;
+    }
+
+    .aside-img {
+      background-size: 350px!important;
+      background-position: 50% 100%!important;
+    }
+
+    .panel {
+      padding-bottom: 110px;
+    }
+  }
+
+  .demands-screen_description {
+    margin-top: 30px;
+
+  }
+}
+
+@media @laptopMd {
+  .demands-screen_description {
+    .demands-screen_txt{
+      margin-right: 6%;
+    }
+  }
+}
+
+
+@media only screen and (max-height: 890px) {
+  .demands-screen {
+    .aside-img {
+      top: 0;
+    }
+  }
+}
+
+@media @h750 {
+  .demands-screen_head {
+    margin-top: 2.5vh;
+  }
+  .demands-screen_description {
+    margin-top: 3vh;
+  }
+  .demands-screen {
+    .aside-img {
+      top: 0;
+      background-size: 140%;
+      left: -25%;
+      background-position: 50% 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1360px) and (max-height: 680px) {
+  .demands-screen_description {
+    .demands-screen_txt{
+      margin-right: 6%;
+    }
+  }
+}
+
+@media @h650 {
+  .demands-screen {
+    .aside-img {
+      background-size: 120%;
+      left: -29%;
+    }
+  }
+}
+

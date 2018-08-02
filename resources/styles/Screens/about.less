@@ -1,0 +1,162 @@
+.about-screen-bg {
+
+  .header-login {
+    background-color: #1F9988;
+  }
+}
+
+.about-screen {
+  .aside {
+    background-color: #126F62;
+  }
+  .panel {
+    position: relative;
+    padding-bottom: 120px;
+  }
+
+  .aside-img {
+    background-image: url("../img/aside/pic_screen1.svg");
+    animation-name: about-screen-anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  @keyframes about-screen-anim {
+    0% {
+      background-position: 0 55%;
+    }
+    50% {
+      background-position: 0 60%;
+    }
+    100% {
+      background-position: 0 55%;
+    }
+  }
+}
+
+.about-screen_head {
+  margin-top: 11.4vh;
+
+  h1 {
+    margin-top: 0;
+    padding-top: 40px;
+    padding-left: 30px;
+    line-height: 85px;
+    z-index: 1;
+  }
+}
+
+.about-screen_description {
+  //margin-top: 155px;
+  //margin-top: 18vh;
+  max-width: 380px;
+  padding-left: 30px;
+}
+
+.about-screen_logos{
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  padding: 0 60px;
+
+  img {
+    transition: .2s;
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 1480px) and (min-height: 650px){
+  .about-screen_description {
+    max-width: 460px;
+  }
+
+  .about-screen_head {
+    margin-top: 12vh;
+  }
+
+
+  .about-screen_logos{
+    justify-content: space-around;
+
+    img {
+      min-width: 170px;
+      max-width: 170px;
+    }
+  }
+}
+
+@media @laptopLg {
+  .about-screen {
+    .aside-img {
+      width: 135%;
+      height: 100%;
+      top: 0;
+      right: -5%;
+    }
+  }
+}
+
+@media @laptop {
+    .about-screen_logos {
+      padding: 0 30px 0 20px;
+    }
+}
+
+@media @tablet {
+  .about-screen_logos {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    bottom: auto;
+    left: auto;
+    padding: 0;
+  }
+}
+
+@media @mobileLg {
+  .about-screen {
+    .aside-img {
+      width: 135%;
+      height: 100%;
+      top: 0;
+      right: -5%;
+    }
+  }
+  .about-screen_description{
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  .about-screen_head {
+    margin-top: 50px;
+    h1{
+      padding-left: 0;
+      line-height: 1;
+    }
+  }
+
+
+}
+
+
+//@h800
+//@h750
+//@h700
+//@h650
+//@h600
+@media @h650 {
+  .about-screen_description {
+    max-width: 460px;
+  }
+}
+@media @h750 {
+  .about-screen_description {
+    margin-top: 10vh;
+  }
+  .about-screen_head {
+    margin-top: 9vh;
+  }
+}
