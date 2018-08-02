@@ -16,12 +16,12 @@
     background-position: 100% 30px;
     background-size: 103%;
     background-image: url("../img/aside/pic_screen5.svg");
-    //animation-name: news-screen-anim;
+    animation-name: news-screen-anim;
     animation-duration: 15s;
     animation-iteration-count: infinite;
   }
 
-
+@media screen and (min-width: 1121px) {
   @keyframes news-screen-anim{
     0%   {background-position: 100% 30px;}
     30%   {background-position: 100% 30px;}
@@ -30,6 +30,8 @@
     70%   {background-position: 100% 30%;}
     100% {background-position:  100% 30px;}
   }
+
+}
 
   .drop-animation {
     top: -100px;
@@ -57,6 +59,7 @@
     max-width: 100%;
     max-height: 540px;
     min-height: 400px;
+    z-index: 1;
   }
 }
 .news-screen_video {
@@ -68,6 +71,7 @@
   iframe {
     max-width: 100%;
     max-height: 100%;
+    z-index: 1;
   }
 }
 

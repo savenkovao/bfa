@@ -15,17 +15,30 @@
     background-size: 110%;
     background-position: 0 50%;
     background-image: url("../img/aside/pic_screen3.svg");
-    //animation-name: solution-screen-anim;
+    animation-name: solution-screen-anim;
     animation-duration: 15s;
     animation-iteration-count: infinite;
   }
 
-  @keyframes solution-screen-anim{
-    0%   {background-position: 0 50%;}
-    25%   {background-position: 0 54%;}
-    50%   {background-position: 0 50%;}
-    75%   {background-position: 0 46%;}
-    100%   {background-position: 0 50%;}
+
+  @media screen and (min-width: 1121px) {
+    @keyframes solution-screen-anim {
+      0% {
+        background-position: 0 50%;
+      }
+      25% {
+        background-position: 0 54%;
+      }
+      50% {
+        background-position: 0 50%;
+      }
+      75% {
+        background-position: 0 46%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
   }
 
   .drop-animation {

@@ -16,16 +16,24 @@
 
   .aside-img {
     background-image: url("../img/aside/pic_screen1.svg");
-    //animation-name: about-screen-anim;
+    animation-name: about-screen-anim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
 }
 
-@keyframes about-screen-anim{
-  0%   {background-position: 0 55%;}
-  50%   {background-position: 0 60%;}
-  100% {background-position:  0 55%;}
+@media screen and (min-width: 1121px) {
+  @keyframes about-screen-anim {
+    0% {
+      background-position: 0 55%;
+    }
+    50% {
+      background-position: 0 60%;
+    }
+    100% {
+      background-position: 0 55%;
+    }
+  }
 }
 
 .about-screen_head {
