@@ -4,7 +4,7 @@ var minifyjs   = require('gulp-js-minify');
 var source     = require('vinyl-source-stream');
 var gulp       = require('gulp');
 
-var PUBLIC_DIR = './../public';
+var PUBLIC_DIR = 'public';
 
 exports.es6toes5 = function (src, dest) {
     return browserify({entries: src, extensions: ['.js'], debug: true})

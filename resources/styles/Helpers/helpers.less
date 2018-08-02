@@ -11,14 +11,13 @@
   .margin-loop();
 }
 
-
 .m{
-  @marginList: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 95, 100, 105, 110, 120, -5, -10, -15, -20, -25, -30, -35, -40, -45, -50, -60, -65, -80, -100, -105;
+  @marginList: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, -5, -10, -15, -20, -25, -30, -35, -40, -45, -50;
   .help-size(@marginList, margin);
 }
 
 .p{
-  @marginList: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 90, 95, 100, 105, 110, 120;
+  @marginList: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
   .help-size(@marginList, padding);
 }
 
@@ -41,31 +40,6 @@
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.video-cont {
-  img {
-    width: 100%;
-  }
-
-  .play-icon {
-    position: absolute;
-    display: inline-block;
-    width: 50px;
-    height: 57px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-image: url("../img/play-icon.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: filter .2s;
-
-    &:hover {
-      filter: brightness(75%);
-    }
-  }
 }
 
 .bold {
